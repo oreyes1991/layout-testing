@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="{{ 'assets/css/default.css' | relative_url }}" />
+	<title>DEMO TOUR LAYOUT</title>
+</head>
+<body>
+	<section class="content">
+		<!-- here we can start to use liquit to generate the data-->
+		<div class="heder-side-content">
+			<!---->
+		</div>
+		<div class="left-side-content">
+			<!---->
+		</div>
+		<div class="main-side-content">
+			<!---->
+			{% for data in site.data.index %}
+				<div class="aticle">
+					<div class="article-title">
+						{{ data.title }}
+					</div>
+					<div class="article-description">
+						{{ data.description }}
+					</div>
+					<div class="article-img">
+						<!--insert img-->
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+		<div class="right-side-content">
+			<!---->
+		</div>
+		<div class="footer-side-content">
+			<!---->
+		</div>
+	</section>
+</body>
+</html>
