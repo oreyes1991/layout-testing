@@ -96,6 +96,7 @@ html, body {
 	color: #fff;
 	grid-column-gap: .5em;
 	grid-row-gap: .5em;
+	place-self: center;
 }
 
 .foot-contact > span {
@@ -135,5 +136,8 @@ html, body {
 		grid-template-areas: "img-a" 
 							 "title-a"
 							 "description-a";
+	}
+	.content > .footer-side-content {
+		grid-template-columns: 1fr;
 	}
 }
