@@ -1,6 +1,15 @@
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,light');
+
 html, body {
 	height: 100%;
 	margin: 0;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Roboto;
 }
 
 .content {
@@ -8,7 +17,7 @@ html, body {
 	display: grid;
 	background-color: #f5f5f5;
 	grid-template-columns: .2fr 1fr .2fr;
-	grid-template-rows: 3em 1fr 3em;
+	grid-template-rows: 3em 1fr auto;
 	grid-template-areas: "header-c header-c header-c"
 						 "left-c main-c right-c"
 						 "foot-c foot-c foot-c";
@@ -25,10 +34,6 @@ html, body {
 	box-shadow: 0px 1px 1px #d3d3d3;
 }
 
-.content > .footer-side-content {
-	grid-area: foot-c;
-	background: #545050;
-}
 
 .content > .left-side-content {
 	grid-area: left-c;
@@ -45,6 +50,16 @@ html, body {
 	padding: 1em;
 }
 
+.content > .footer-side-content {
+	grid-area: foot-c;
+	background: #545050;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.content > .footer-side-content > div {
+	padding: 1em;
+}
 .aticle {
 	text-align: justify;
 	display: grid;
@@ -77,6 +92,34 @@ html, body {
 	border-radius: 3px;
 	width: 200px;
 	place-self: center;
+}
+
+.foot-contact {
+	display: grid;
+	grid-template-columns: 1em 1fr;
+	color: #fff;
+	grid-column-gap: .5em;
+	grid-row-gap: .5em;
+}
+
+.foot-contact > span {
+	grid-area: 1 / 1 / span 1 / span 2;
+	font-size: 20px;
+	color: #3a3636;
+}
+
+.foot-socials {
+	display: grid;
+	grid-template-columns: 4em 4em 4em;
+	place-self: center;
+}
+
+.icon-round {
+	font-size: 20px;
+	place-self: center;
+	padding: .5em;
+	background-color: #fff;
+	border-radius: 50%;
 }
 
 @media only screen and (max-width: 1100px) {

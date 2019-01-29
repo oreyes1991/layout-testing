@@ -17,26 +17,37 @@
 			<!---->
 		</div>
 		<div class="main-side-content">
-			<!---->
-			{% for data in site.data.index %}
-				<div class="aticle">
-					<div class="article-title">
-						{{ data.title }}
-					</div>
-					<div class="article-description">
-						{{ data.description }}
-					</div>
-					<div class="article-img">
-						<!--insert img-->
-					</div>
-				</div>
-			{% endfor %}
+			{{ content }}
 		</div>
 		<div class="right-side-content">
 			<!---->
 		</div>
 		<div class="footer-side-content">
 			<!---->
+			<div class="foot-logos">
+				<!-- maybe our logo here -->
+			</div>
+			<div class="foot-contact">
+				<span> Contact Us </span>
+				<i class="fa fa-phone"></i>
+				<p>+00-000000</p>
+				<i class="fa fa-phone"></i>
+				<p>+11-111111</p>
+				<i class="fa fa-envelope"></i>
+				<p>example@org.com</p>
+			</div>
+			<div class="foot-socials">
+				<!-- TODO:-->
+				<div class="icon-round">
+					<i class="fa fa-tripadvisor"></i>
+				</div>
+				<div class="icon-round">
+					<i class="fa fa-twitter"></i>
+				</div>
+				<div class="icon-round">
+					<i class="fa fa-instagram"></i>
+				</div>
+			</div>
 		</div>
 	</section>
 </body>

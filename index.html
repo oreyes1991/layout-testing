@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<!---->
+{% for data in site.data.index %}
+<div class="aticle">
+	<div class="article-title">
+		{{ data.title }}
+	</div>
+	<div class="article-description">
+		{{ data.description }}
+	</div>
+	<div class="article-img">
+		<!--insert img-->
+	</div>
+</div>
+{% endfor %}
