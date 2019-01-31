@@ -7,8 +7,12 @@ class MainContainer extends MetaContainer {
 	render () {
 		const content = document.createElement('div');
 		content.id = 'map-container';
-		const counter = document.createElement('mf-map');
-		content.appendChild(counter);
+		const title = document.createElement('h2');
+		const subTitle = document.createElement('span');
+		title.innerHTML = global._mapData.title || 'empty';
+		subTitle.innerHTML = global._mapData.subTitle || 'empty';
+		const map = document.createElement('mf-map');
+		content.append(title, subTitle, map);
 		return content;
 	}
 }

@@ -9,44 +9,15 @@ class Map extends MetaComponent {
 	constructor () {
 		super(global.storage);
 		this.createMap = this.createMap.bind(this);
+		this.createCoordsActives = this.createCoordsActives.bind(this);
 	}
 	// eslint-disable-next-line class-method-use-this
 	render () {
 		const content = document.createElement('div');
 		content.className = 'map';
-		const layoutPE = 
-		`00000000000000000000000000000
-		00000000000000000000000000000
-		00000000000000000000000000000
-		00000000000000000000000000000
-		00000000000000000000000000000
-		00000000000000111000000000000
-		00000000000001111110000000000
-		00000000000111111111111111000
-		00100000111111111111111111000
-		11110011111111111111111100100
-		11111111111111111111100000000
-		10111111111111111111000000000
-		00111111111111111111000000000
-		00001111111111111100000000000
-		00000011111111111111000000000
-		00000011111111111111000000000
-		00000001111111111111111111100
-		00000000111111111111111111111
-		00000000001111111111111111111
-		00000000000111111111111111111
-		00000000000011111111111111111
-		00000000000001111111111111111
-		00000000000000001111111111111
-		00000000000000000011011111111
-		00000000000000000000000011111
-		00000000000000000000000001011
-		00000000000000000000000000000
-		00000000000000000000000000000
-		00000000000000000000000000000
-		00000000000000000000000000000`;
-		
-		for (let i = 1; i <= 30; i++) {
+		const layout = global._mapData.layout;
+		const coords = global._mapData.coords;
+		for (let i = 1; i <= 21; i++) {
 			for (let j = 1; j <= 30; j++) {
 				const el = document.createElement('div');
 				el.className = 'point-transparent';
@@ -54,24 +25,42 @@ class Map extends MetaComponent {
 				content.appendChild(el);
 			}
 		}
-
-		this.createMap(layoutPE, content);
+		this.createMap(layout, content);
+		this.createCoordsActives(coords, content);
 		return content;
 	}
 	/**
-	 * 
+	 * create the shape of the map, 
+	 * layout is a sting of 21 lines, 30 characters each line
+	 * if char = 0 is transparent and 1 a blank point
 	 */
 	createMap (layout, m) {
-		layout.split('\n').forEach((ln, i) => {
-			ln.split('').forEach((n, j) => {
-				let el = m.querySelectorAll(`[coord="${i + 1}-${j + 1}"]`);
-				if (el[0]) {
-					el[0].className = n === '1' ? 'point-blank' : 'point-transparent';
-				}
+		try {
+			layout.split('\n').forEach((ln, i) => {
+				ln.split('').forEach((n, j) => {
+					let el = m.querySelectorAll(`[coord="${i + 1}-${j + 1}"]`);
+					if (el[0]) {
+						el[0].className = n === '1' ? 'point-blank' : 'point-transparent';
+					}
+				})
 			})
-		})
+		} catch (err) {
+			console.error('Map.createMap', err);
+		}
 	}
-
+	/**
+	 * set the dots you wanna interact with in the map
+	 */
+	createCoordsActives (coords, m) {
+		try {
+			coords.forEach(c => {
+				const el = m.querySelectorAll('[coord="'+ c.coord +'"]');
+				el[0].className = 'point-active';
+			})
+		} catch (err) {
+			console.error('Map.createCoordsActive', err);
+		}
+	}
 	/**
 	 * Handle Events in a organized way.
 	 */
