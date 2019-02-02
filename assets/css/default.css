@@ -24,7 +24,7 @@ html, body {
 
 .content > .heder-side-content {
 	grid-area: header-c;
-	background-color: #fff;
+	background-color: #5fc562;
 	box-shadow: 0px 1px 1px #d3d3d3;
 }
 
