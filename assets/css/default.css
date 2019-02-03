@@ -88,6 +88,18 @@ html, body {
 	place-self: center;
 }
 
+.article-sales {
+	position: relative;
+	top: -76%;
+	left: -11%;
+	background-color: orange;
+	text-align: center;
+	opacity: .8;
+	color: #666;
+	transform: rotate(-45deg);
+	width: 10em;
+}
+
 .foot-contact {
 	display: grid;
 	grid-template-columns: 1em 1fr;
