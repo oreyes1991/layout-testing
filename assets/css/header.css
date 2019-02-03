@@ -8,10 +8,24 @@
 
 .header-search {
 	grid-area: search-h;
+	background-color: white;
+    place-self: center;
+    border-radius: 3px;
+	padding: .5em;
+    
+}
+
+.header-search > input {
+	border: none;
+	outline: none;
 }
 
 .heder-side-content {
 	display: grid;
 	grid-template-columns: 10em 1fr 16em;
 	grid-template-areas: "logo-h content-h search-h";
+}
+
+.header-search > i {
+	color: darkgrey;
 }
