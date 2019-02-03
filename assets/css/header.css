@@ -30,3 +30,14 @@
 .header-search > i {
 	color: #666666;
 }
+
+.menu-item {
+	justify-self: center;
+	align-self: center;
+	
+}
+
+.menu-item:hover {
+    color: #f1eded;
+	cursor: pointer;
+}
