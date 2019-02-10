@@ -1,5 +1,6 @@
 @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,light');
+@import url('./header.css');
 
 html, body {
 	height: 100%;
@@ -16,7 +17,7 @@ html, body {
 	display: grid;
 	background-color: #f5f5f5;
 	grid-template-columns: 1fr .3fr;
-	grid-template-rows: 3em 1fr auto;
+	grid-template-columns: 1fr .3fr;
 	grid-template-areas: "header-c header-c"
 						 "main-c right-c"
 						 "foot-c foot-c";
@@ -24,7 +25,7 @@ html, body {
 
 .content > .heder-side-content {
 	grid-area: header-c;
-	background-color: #fff;
+	background-color: #5fc562;
 	box-shadow: 0px 1px 1px #d3d3d3;
 }
 
@@ -52,39 +53,58 @@ html, body {
 	padding: 1em;
 }
 
-.aticle {
-	text-align: justify;
+.content > .main-side-content > .main {
 	display: grid;
-	background-color: #fff;
-	padding: 1em 0;
-	grid-template-rows: 2em 1fr;
-	grid-template-columns: 26% 1fr;
-	border-radius: .5em;
-	box-shadow: 0px 0 4px 1px #d3d3d3;
-	grid-template-areas: "img-a title-a" "img-a description-a";
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 500px;
+	padding: 5px;
+	border-radius: 5px;
+	grid-gap: 1px;
+	background-color:inherit;
+	position: relative;
 }
 
-.article-title {
-	font-size: 16px;
-	font-weight: 900;
-	grid-area: title-a;
-	padding-left: .5em
+.content > .main-side-content > .main > div {
+	border: 1px solid white;
+	padding: 5px;
+	align-self: stretch;
+	justify-self: stretch;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-radius: 2px;
+	width: 95%;
+	opacity: .8;
+}
+.first {
+	background-image: url('https://res.cloudinary.com/dlia7phdx/image/upload/v1549756001/3123123_1.jpg');
 }
 
-.article-description {
-	font-size: 14px;
-	padding: 0em 1em 1em;
-	color: #4c4949;
-	grid-area: description-a;
+.second {
+	background-image: url('https://res.cloudinary.com/dlia7phdx/image/upload/v1549756000/3123123_2.jpg');
 }
 
-.article-img {
-	grid-area: img-a;
-	height: 200px;
-	border: 1px solid #d3d3d3;
-	border-radius: 3px;
-	width: 200px;
-	place-self: center;
+.third {
+	background-image: url('https://res.cloudinary.com/dlia7phdx/image/upload/v1549755995/3123123_3.jpg');
+}
+
+.forth {
+	background-image: url('https://res.cloudinary.com/dlia7phdx/image/upload/v1549756003/3123123_4.jpg');
+}
+
+.fifth {
+	background-image: url('https://res.cloudinary.com/dlia7phdx/image/upload/v1549755997/3123123_5.jpg');
+}
+
+.zoom {
+	webkit-transition: all .5s cubic-bezier(0.84, -0.19, 0, 1.54);;
+	transition: all .5s cubic-bezier(0.84, -0.19, 0, 1.54);;
+}
+
+.zoom:hover { 
+	position: relative;
+	opacity: 1 !important;
+	width: 55em !important;
 }
 
 .foot-contact {
