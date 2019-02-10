@@ -7,16 +7,20 @@
 	<link rel="stylesheet" href="{{ 'assets/css/default.css' | relative_url }}" />
 	<link rel="stylesheet" href="{{ 'assets/css/testing.css' | relative_url }}" />
 	<title>DEMO TOUR LAYOUT</title>
+	<script src="{{ 'assest/js/video.js' | relative_url }}"></script>
 	<script>
 		
 		window._mapData = {{ site.data.map.index | jsonify }};
 	</script>
 </head>
 <body>
-	<section class="content">
-		<!-- here we can start to use liquit to generate the data-->
-		<div class="heder-side-content">
-			<!---->
+	<div class="top-container">
+		<video autoplay muted loop id="header-video">
+			<source src="https://res.cloudinary.com/dvv4qgnka/video/upload/c_fill,g_center,h_320,w_1024,x_0/v1549234368/Videoloop.mp4" type="video/mp4">
+		</video>
+	</div>
+	<div class="header" id="myHeader">
+		<div class="main-menu">
 			<div class="header-logo"></div>
 			<div class="header-content">
 				<div class="menu-item active">
@@ -31,11 +35,11 @@
 					</span>
 				</div>
 			</div>
-			<div class="header-search">
-				<input type="text" />
-				<i class="fa fa-search"></i>
-			</div>
 		</div>
+	</div>
+	<section class="content">
+		<!-- here we can start to use liquit to generate the data-->
+		
 		<div class="main-side-content">
 			{{ content }}
 		</div>
@@ -72,5 +76,6 @@
 	</section>
 	<!-- add metaflux map-->
 	<script src="assets/js/map.js"></script>
+	<script src="assets/js/sticky.js"></script>
 </body>
 </html>

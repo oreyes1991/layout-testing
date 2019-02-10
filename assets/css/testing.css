@@ -1,14 +1,15 @@
 :root {
-    --mi-variable: #fff;
+	--mi-variable: #fff;
 }
 .foot-logos {
-    padding: 10px !important;   
+	padding: 10px !important;   
 }
 
 .article-img > img {
-    width: 100%;
-    height: 100%;
+	width: 100%;
+	height: 100%;
 }
 .content {
-    background-color: #ebf5eb;
+	background-color: #ebf5eb;
+	padding: 0;
 }
