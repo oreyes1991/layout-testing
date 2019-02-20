@@ -98,5 +98,37 @@ body, html {
 		background-attachment: fixed;
 		background-position: top;
 		background-size: auto;
+		grid-template-columns: 1fr;
+	}
+
+	.btn.transparent {
+		opacity: .6;
+	}
+
+	#navigation {
+		width: 90vw;
+		height: 13vh;
+		background-image: linear-gradient(to top left,#8bc223,#123443);
+		border-radius: 2em;
+		top: 86%;
+		padding: 0;
+		opacity: .6;
+	}
+
+	#navigation > span { 
+		display: grid;
+		grid-auto-flow: column;
+		place-self: stretch;
+		align-self: stretch;
+		justify-self: stretch;
+	}
+
+	#navigation span > div {
+		height: 0px;
+		width: 100%;
+		align-self: center;
+		place-self: center;
+		justify-self: center;
+		margin: 0;
 	}
 }
