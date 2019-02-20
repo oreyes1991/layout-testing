@@ -30,17 +30,27 @@ function onClicked (id) {
 
 function isScrolledIntoView(y) {
 	try {
+		const _qs = document.querySelector;
 		const _arr = document.querySelector('.main') !== null ? document.querySelector('.main').children : [];
 		for(let i = 0; i < _arr.length; i++) {
 			if (_arr[i].offsetTop < (y + 150) && y < _arr[i].offsetTop + _arr[i].offsetHeight) {
 				if (_arr[i].id !== 'navigation') {
 					const target = document.querySelector(`div[target="${_arr[i].id}"]`);
-					document.querySelector('#navigation > span > div.active').classList.remove('active');
+					const active = document.querySelector('#navigation > span > div.active');
+					if (active.getAttribute('target') !== target.getAttribute('target')) {
+						active.classList.remove('active');
+						if (document.querySelector('.prev-active') !== null) {
+							document.querySelector('.prev-active').classList.remove('prev-active');
+						}
+					}
+					if (target.previousElementSibling) {
+						target.previousElementSibling.classList.add('prev-active');
+					}
 					target.classList.add('active');
 				}
 			}
 		}
-	} catch {
-		console.log('isScrolledIntoView');
+	} catch (e){
+		console.log('isScrolledIntoView', e);
 	}
 }
