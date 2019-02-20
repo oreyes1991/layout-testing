@@ -106,13 +106,14 @@ body, html {
 	}
 
 	#navigation {
-		width: 90vw;
-		height: 13vh;
-		background-image: linear-gradient(to top left,#8bc223,#123443);
-		border-radius: 2em;
-		top: 86%;
-		padding: 0;
-		opacity: .6;
+		    width: 80vw;
+    		height: 8vh;
+    		left: 11vw;
+    		background: linear-gradient(to top left,#8bc223,#123443);
+    		border-radius: 2em;
+    		top: 90%;
+    		padding: 0;
+    		opacity: .6;
 	}
 
 	#navigation > span { 
