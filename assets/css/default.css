@@ -95,7 +95,7 @@ body, html {
 	.parallax {
 		-moz-background-size: auto;
 		-webkit-background-size: auto;
-		background-attachment: scroll;
+		background-attachment: fixed;
 		background-position: top;
 		background-size: auto;
 		grid-template-columns: 1fr;
