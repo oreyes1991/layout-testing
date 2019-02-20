@@ -11,12 +11,19 @@
 .menu-item {
 	justify-self: center;
 	align-self: center;
-	
+	height: 1.5em;
+	width: 60%;
+	text-align: center;
+	border-radius: 3px;
 }
 
+.menu-item > i {
+	margin-left: 5px;
+}
 .menu-item:hover {
 	color: #cee0cb;
 	cursor: pointer;
+	border-bottom: 1px solid;
 }
 
 .floating-header {
@@ -35,6 +42,9 @@
 	height: 6vh;
 	color: #ffffff;
 	z-index: 2;
+	place-self: center;
+	width: 80%;
+	padding-top: 1em;
 }
 
 .menu-item.active {
@@ -49,9 +59,10 @@
 
 .header {
 	padding: 10px 16px;
-	background: #010001;
+	background: #1d1b1b;
 	color: #f1f1f1;
 	z-index: 5;
+	transition: background .7s cubic-bezier(0.85, 0.09, 0.16, 0.9);
 }
 
 .content {
@@ -62,4 +73,6 @@
 	position: fixed;
 	top: 0;
 	width: 100%;
+	display: grid;
+	background: #0100019e;
 }

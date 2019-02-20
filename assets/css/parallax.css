@@ -1,0 +1,54 @@
+
+.main {
+	height: 100%;
+	display: grid;
+	grid-template-rows: 100vh 100vh 100vh;
+	grid-row-gap: .1em;
+}
+
+.parallax {
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+#machupichu {
+	background-image: url(https://d3hne3c382ip58.cloudfront.net/files/uploads/bookmundi/resized/cmsfeatured/things-to-do-in-machu-picchu-1516087973-1000X561.jpg);
+}
+
+#paracas {
+	background-image: url(http://misviajesporahi.es/wp-content/uploads/2012/04/panorama-paracas.jpg);
+}
+
+#tarapoto {
+	background-image: url(https://i.ytimg.com/vi/5OH8mZ6mSs8/maxresdefault.jpg);
+}
+
+.short-desc {
+	place-self: center;
+	color: #fff;
+	font-size: 3em;
+	display: grid;
+	grid-row-gap: .5em;
+	-webkit-text-stroke: 1px #666;
+	padding: .5em;
+	text-align: center;
+}
+
+.btn {
+	place-self: center;
+	padding: .5em;
+	cursor: pointer;
+}
+
+.btn.transparent {
+	border-radius: 2em;
+	background-image: linear-gradient(to top left,#8bc223,#123443);
+}
+
+.btn.transparent:hover {
+	transform: translateY(1px);
+}

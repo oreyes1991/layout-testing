@@ -1,0 +1,42 @@
+#navigation {
+	position: fixed;
+	right: 2%;
+	height: 60vh;
+	width: 18vw;
+	top: 17%;
+	display: grid;
+	color: #fff;
+	-webkit-text-stroke: .5px #666;
+	font-size: 1.5em;
+	background: url(https://res.cloudinary.com/dvv4qgnka/image/upload/v1550555677/peruFlag.png);
+	padding: 1.5em 0;
+	background-size: 95% 100%;
+	background-position-x: -30%;
+	background-repeat: no-repeat;
+}
+
+#navigation > * {
+	place-self: center;
+	align-self: center;
+	justify-self: center;
+}
+
+
+#navigation span > div {
+	height: 5em;
+	border: 1px solid;
+	width: 0;
+	margin: auto;
+}
+
+#navigation span > div.round {
+	width: .5em;
+	height: .5em;
+	border-radius: 50%;
+	background: #fff;
+	cursor: pointer;
+}
+
+.round.active {
+	background: linear-gradient(#FFC107, #E91E63) !important;
+}
