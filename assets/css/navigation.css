@@ -24,9 +24,17 @@
 
 #navigation span > div {
 	height: 5em;
-	border: 1px solid;
-	width: 0;
+	width: 2px;
 	margin: auto;
+	background: #fff;
+}
+
+.round.active + div {
+	background: linear-gradient(#E91E63, #fff) !important;
+}
+
+.prev-active {
+	background: linear-gradient(#fff, #FFC107) !important;
 }
 
 #navigation span > div.round {
